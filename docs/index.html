@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management Platform | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio showcase page for a Spring Boot task management backend project."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="eyebrow">Java Backend Portfolio</p>
+        <h1>Task Management Platform</h1>
+        <p class="lead">
+          A Spring Boot backend project featuring JWT authentication, project
+          management, and backlog task APIs.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="../Readme.md">Read Full README</a>
+          <a class="btn" href="https://github.com/hanyu1234/Task-Management-Platform" target="_blank" rel="noreferrer">View Repository</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Project Overview</h2>
+        <p>
+          This project demonstrates a layered backend architecture:
+          <strong>Controller - Service - Repository</strong>, with validation,
+          authentication, and database persistence.
+        </p>
+        <ul>
+          <li>Spring Boot 2.7.14, Java 8</li>
+          <li>Spring Security + JWT for auth</li>
+          <li>Spring Data JPA + MySQL</li>
+          <li>RESTful APIs for User, Project, and Backlog Task</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Architecture Flow</h2>
+        <p class="mono">
+          Client -> Security Filter -> Controller -> Validation -> Service ->
+          Repository -> JPA/Hibernate -> MySQL -> Response
+        </p>
+        <p>
+          Protected APIs require header:
+          <code>Authorization: TMP &lt;token&gt;</code>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Core API Endpoints</h2>
+        <div class="grid two">
+          <div>
+            <h3>Authentication</h3>
+            <ul>
+              <li><code>POST /api/users/register</code></li>
+              <li><code>POST /api/users/login</code></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Project</h3>
+            <ul>
+              <li><code>POST /api/project</code></li>
+              <li><code>GET /api/project/{projectId}</code></li>
+              <li><code>GET /api/project/all</code></li>
+              <li><code>PUT /api/project</code></li>
+              <li><code>DELETE /api/project/{projectId}</code></li>
+            </ul>
+          </div>
+        </div>
+        <h3>Backlog Task</h3>
+        <ul>
+          <li><code>POST /api/backlog/{projectId}</code></li>
+          <li><code>GET /api/backlog/{projectId}</code></li>
+          <li><code>GET /api/backlog/{projectId}/{projectSequence}</code></li>
+          <li><code>PUT /api/backlog/{projectId}/{projectSequence}</code></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>My Contributions</h2>
+        <ul>
+          <li>Designed and implemented REST APIs for project/task management.</li>
+          <li>Integrated JWT login flow and secured protected resources.</li>
+          <li>Implemented request validation and consistent error response mapping.</li>
+          <li>Built user-scoped data access with principal-aware service methods.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Screenshots & Demo</h2>
+        <p>
+          Put your screenshots or demo GIF files in
+          <code>scscreenshots/</code>, then replace the sample filenames below.
+        </p>
+        <div class="grid three">
+          <figure class="shot">
+            <img src="../scscreenshots/1.png" alt="Login API screenshot" />
+            <figcaption>Login API</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../scscreenshots/3.png" alt="Create project screenshot" />
+            <figcaption>Create Project</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../scscreenshots/3.png" alt="Backlog list screenshot" />
+            <figcaption>Backlog List</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Built for portfolio showcase. Last updated: 2026.</p>
+    </footer>
+  </body>
+  </html>
+

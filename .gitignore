@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -31,3 +32,49 @@ build/
 
 ### VS Code ###
 .vscode/
+=======
+# ===== Java / Maven =====
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.settings/
+.classpath
+.project
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Env / Secrets =====
+.env
+.env.*
+!.env.example
+application-local.properties
+application-prod.properties
+**/application-local.properties
+**/application-prod.properties
+
+# ===== Node (if frontend added later) =====
+node_modules/
+dist/
+build/
+
+# Keep portfolio screenshots tracked
+!scscreenshots/
+!scscreenshots/.gitkeep
+>>>>>>> 221f6c5 (Initial version)
